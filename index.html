@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Erotik Luxembourg</title>
     <style>
+        
         /* Ajout des styles précédemment définis */
         body {
             font-family: Arial, sans-serif;
@@ -13,6 +16,15 @@
             background: linear-gradient(to bottom, #fff, #fff);
             color: #ff0000;
         }
+body {
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4);
+    animation: gradient 5s infinite;
+}
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 
         header {
     position: fixed; /* Fixe le header en haut de la page */
@@ -429,7 +441,7 @@
             <button>Réserver maintenant</button>
         </section>
     </section>
-    
+    <button id="back-to-top" style="display: none;">↑</button>
     
     <!-- Styles CSS pour le carrousel -->
     <style>
@@ -515,6 +527,27 @@ document.getElementById('confirm-age').addEventListener('click', () => {
 document.getElementById('deny-age').addEventListener('click', () => {
     alert("Accès refusé !");
 });
+        const sections = document.querySelectorAll('section');
+window.addEventListener('scroll', () => {
+    sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+            section.style.opacity = 1;
+            section.style.transform = 'translateY(0)';
+        }
+    });
+});
+        const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 200) {
+            backToTop.style.display = 'block';
+        } else {
+            backToTop.style.display = 'none';
+        }
+    });
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
     </script>
     <footer>
         <p>© 2024 Erotik LUX Agence de Massage Érotique. Tous droits réservés. | Conditions de paiement : Paypal, cartes bancaires, virements.</p>
