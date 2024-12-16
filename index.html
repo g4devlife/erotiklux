@@ -509,7 +509,12 @@
             alert("Vous devez avoir au moins 18 ans pour accéder à ce site.");
             window.location.href = "https://www.google.com"; // Redirige l'utilisateur
         });
-
+document.getElementById('confirm-age').addEventListener('click', () => {
+    document.getElementById('age-verification-popup').style.display = 'none';
+});
+document.getElementById('deny-age').addEventListener('click', () => {
+    alert("Accès refusé !");
+});
     </script>
     <footer>
         <p>© 2024 Erotik LUX Agence de Massage Érotique. Tous droits réservés. | Conditions de paiement : Paypal, cartes bancaires, virements.</p>
