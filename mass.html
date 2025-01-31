@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massage - Réservation</title>
+    <style>
+        .header-image {
+            height: 100%;
+            max-height: 60px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        header {
+            z-index: 1000; 
+            position: fixed;
+            display: flex;
+            width: 100%;  
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: rgb(117, 1, 1);
+            height: 60px;
+        }
+
+        .about button, .reservation button {
+            margin: 20px;
+            padding: 10px 20px;
+            background: #9a1803;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #ffffff;
+        }
+        
+        .massages {
+            padding: 50px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: #0078d4;
+        }
+
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: url('spa-background.jpg') no-repeat center/cover;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+            color: #0078d4;
+            animation: slideIn 2s ease-out;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .card img.active {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            border: 5px solid #ff5733;
+            transform: scale(1.1);
+        }
+
+        .card h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .btn {
+            background-color: #ff5733;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .btn:hover {
+            background-color: #e64c2c;
+        }
+    </style>
+</head>
+<header>
+    <img src="Erotik.png" alt="Logo" class="header-image">
+    <nav>
+        <a href="index.html#about">À propos</a>
+        <a href="mass.html">Nos filles</a>
+        <a href="https://wa.me/33756869240" target="_blank">Contact</a>
+    </nav>
+</header>
+<body>
+    <div class="container">
+        <h1><br>
+             Masseuses</h1>
+        <div class="gallery" id="masseuseGallery"></div>
+    </div>
+    
+    <script>
+        const masseuses = [
+            { name: "Sophie", image: "16.jpg" },
+            { name: "Elena", image: "10.jpg" },
+            { name: "Charlotte", image: "1.jpg" },
+            { name: "Isabelle", image: "2.jpg" },
+            { name: "Amélie", image: "3.jpg" },
+            { name: "Linda", image: "4.jpg" },
+            { name: "Josette", image: "5.jpg" },
+            { name: "Riley", image: "6.jpg" },
+            { name: "Amanda", image: "7.jpg" },
+            { name: "Aurelie", image: "8.jpg" },
+            { name: "Nina", image: "9.jpg" },
+            { name: "Cassidi", image: "11.jpg" },
+            { name: "Oranne", image: "12.jpg" },
+            { name: "Nafisa", image: "14.jpg" },
+            { name: "Rose", image: "15.jpg" },
+        ];
+
+        const gallery = document.getElementById("masseuseGallery");
+
+        masseuses.forEach(masseuse => {
+            const card = document.createElement("div");
+            card.classList.add("card");
+            card.innerHTML = `
+                <img src="${masseuse.image}" alt="${masseuse.name}" onclick="toggleHighlight(this)">
+                <h3>${masseuse.name}</h3>
+                <button class="btn" onclick="reserve('${masseuse.name}')">Réserver</button>
+            `;
+            gallery.appendChild(card);
+        });
+
+        function reserve(name) {
+            alert("Vous avez réservé une séance avec " + name + " !");
+        }
+
+        function toggleHighlight(img) {
+            document.querySelectorAll(".gallery img").forEach(image => image.classList.remove("active"));
+            img.classList.add("active");
+        }
+    </script>
+</body>
+</html>
