@@ -5,6 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Massage - Réservation</title>
     <style>
+          /* Ajout des styles précédemment définis */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #fff, #fff);
+            color: #ff0000;
+        }
+body {
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4);
+    animation: gradient 5s infinite;
+}
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+        header {
+    position: fixed; /* Fixe le header en haut de la page */
+    top: 0; /* Colle le header au sommet */
+    left: 0; /* Aligne le header au bord gauche */
+    width: 100%; /* Prend toute la largeur de l'écran */
+    display: flex; /* Utilise le flexbox pour organiser les enfants */
+    justify-content: space-between; /* Écarte les éléments principaux */
+    align-items: center; /* Aligne verticalement les éléments */
+    padding: 20px; /* Espacement intérieur */
+    background: rgb(117, 1, 1); /* Couleur de fond */
+    box-sizing: border-box; /* Inclut le padding dans la largeur */
+    z-index: 1000; /* Assure que le header reste au-dessus des autres éléments */
+}
+
+
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
         .header-image {
             height: 100%;
             max-height: 60px;
