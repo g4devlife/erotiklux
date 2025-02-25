@@ -1,54 +1,51 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-<meta property="og:title" content="Erotiklux.lu">
-<meta property="og:description" content="EROTIK LUX, c’est bien plus qu’une simple agence, c’est un espace dédié à l’exploration des sens et à la recherche du bien-être. Nous offrons une expérience unique où l’élégance et la sensualité se mêlent pour vous faire vivre des instants d’exception.">
-<meta property="og:image" content="https://res.cloudinary.com/dqabv7zve/image/upload/v1734769177/Erotik_z8zjsm.png">
-<meta property="og:url" content="https://erotiklux.lu">
-<meta property="og:type" content="website">
-
-<!-- Favicon -->
-<link rel="icon" href="https://res.cloudinary.com/dqabv7zve/image/upload/v1734769177/Erotik_z8zjsm.png" type="image/png">
-<link rel="apple-touch-icon" href="https://res.cloudinary.com/dqabv7zve/image/upload/v1734769177/Erotik_z8zjsm.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Erotik Luxembourg</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://res.cloudinary.com/dqabv7zve/image/upload/v1734769177/Erotik_z8zjsm.png" type="image/png">
+    <link rel="apple-touch-icon" href="https://res.cloudinary.com/dqabv7zve/image/upload/v1734769177/Erotik_z8zjsm.png">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Erotiklux.lu">
+    <meta property="og:description" content="EROTIK LUX, c’est bien plus qu’une simple agence, c’est un espace dédié à l’exploration des sens et à la recherche du bien-être.">
+    <meta property="og:image" content="https://res.cloudinary.com/dqabv7zve/image/upload/v1734769177/Erotik_z8zjsm.png">
+    <meta property="og:url" content="https://erotiklux.lu">
+    <meta property="og:type" content="website">
+    
     <style>
-        
-        /* Ajout des styles précédemment définis */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #fff, #fff);
+            background: linear-gradient(-45deg, #0078d4, #66a6d1, #0078d4);
+            animation: gradient 5s infinite ease-in-out;
             color: #ff0000;
         }
-body {
-     background: linear-gradient(-45deg, #0078d4, #66a6d1, #0078d4);
-    animation: gradient 5s infinite;
-}
-@keyframes gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
 
         header {
-    position: fixed; /* Fixe le header en haut de la page */
-    top: 0; /* Colle le header au sommet */
-    left: 0; /* Aligne le header au bord gauche */
-    width: 100%; /* Prend toute la largeur de l'écran */
-    display: flex; /* Utilise le flexbox pour organiser les enfants */
-    justify-content: space-between; /* Écarte les éléments principaux */
-    align-items: center; /* Aligne verticalement les éléments */
-    padding: 20px; /* Espacement intérieur */
-    background: rgb(117, 1, 1); /* Couleur de fond */
-    box-sizing: border-box; /* Inclut le padding dans la largeur */
-    z-index: 1000; /* Assure que le header reste au-dessus des autres éléments */
-}
-
-
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgb(117, 1, 1);
+            z-index: 1000;
+        }
+        
         header a {
             color: #ffffff;
             text-decoration: none;
@@ -59,59 +56,38 @@ body {
             text-align: center;
             padding: 100px 20px;
             background: url('spa-background.jpg') no-repeat center/cover;
+            animation: fadeIn 1.5s ease-in forwards;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .hero h1 {
             font-size: 3em;
             margin: 0;
             color: #fdfdfd;
+            animation: slideIn 2s ease-out;
         }
-.hero h1 {
-    animation: slideIn 2s ease-out;
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-        .hero p {
-            margin: 20px 0;
-            font-size: 1.2em;
-            color: #ffffff;
+        
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
         }
-
-        .hero button {
-            padding: 15px 30px;
-            background: #9a1803;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1em;
-            cursor: pointer;
-            color: #ffffff;
-        }
-.hero {
-    opacity: 0;
-    transform: translateY(-50px);
-    animation: fadeIn 1.5s ease-in forwards;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
         .about {
             display: flex;
             justify-content: space-between;
             padding: 20px;
             flex-wrap: wrap;
+            text-align: center;
         }
 
         .about img {
@@ -120,54 +96,20 @@ body {
             border-radius: 10px;
             object-fit: cover;
         }
-
+        
         .about div {
             max-width: 45%;
             color: #f8f4f4;
         }
 
-        .reservation {
+        .reservation, .pricing, .massages {
             text-align: center;
             padding: 50px 20px;
         }
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .card {
-            background: #f0f8fe;
-            color: #131212;
-            border-radius: 10px;
-            overflow: hidden;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .card img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .card h3 {
-            margin: 15px 0;
-        }
-
-        .card p {
-            padding: 0 15px;
-        }
-
-        .card button {
-            margin: 20px;
-            padding: 10px 20px;
-            background: #9a1803;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            color: #ffffff;
+        .massages {
+            background: rgb(208, 113, 35);
+            color: #0078d4;
         }
 
         footer {
@@ -178,387 +120,47 @@ body {
             color: #fff;
         }
 
-        .pricing {
-            padding: 50px 20px;
-            background: rgba(63, 115, 161, 0.221);
-            text-align: center;
-            color: #ffffff;
-        }
-
-        .pricing h2 {
-            color: #fafafad8;
-        }
-
-        .pricing ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .pricing li {
-            margin: 10px 0;
-        }
-
-        .pricing button {
-            margin: 20px;
-            padding: 10px 20px;
-            background: #9a1803;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            color: #ffffff;
-        }
-
-        .header-image {
-            height: 100%;
-            max-height: 60px;
-            width: auto;
-            object-fit: contain;
-        }
-
-        header {
-            z-index: 1000; 
-            position: fixed;
-            display: flex;
-            width: 100;  
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background: rgb(117, 1, 1);
-            height: 60px;
-        }
-
-        .about button {
-            margin: 20px;
-            padding: 10px 20px;
-            background: #9a1803;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            color: #f8f8f8;
-        }
-
-        .reservation button {
-            margin: 20px;
-            padding: 10px 20px;
-            background: #9a1803;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            color: #ffffff;
-        }
-        .massages {
-            padding: 50px 20px;
-            background: rgb(208, 113, 35);
-            text-align: center;
-            color: #0078d4;
-        }
-        @media (min-width: 1024px) {
-            .hero h1 {
-                font-size: 4em;
-            }
-            .hero p {
-                font-size: 1.5em;
-            }
-            .about img {
-                max-width: 40%;
-            }
-            .about div {
-                max-width: 55%;
-            }
-        }
-
+        /* Responsive */
         @media (max-width: 768px) {
             .about {
                 flex-direction: column;
                 align-items: center;
-                text-align: center;
-                padding: 20px;
             }
-
             .about img {
                 width: 100%;
-                max-height: 700px;
-                max-width: 110%;
-                object-fit: cover;
                 border-radius: 10px;
             }
-
-            .about div {
-                max-width: 100%;
-                margin-top: 20px;
-            }
-
-            .reservation {
-                padding: 20px 15px;
-            }
         }
-        /* Style pour le pop-up */
-#age-verification-popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-}
-
-.popup-content {
-    background: white;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.popup-content h1 {
-    margin-bottom: 10px;
-    font-size: 24px;
-    color: red;
-}
-
-.popup-content p {
-    margin-bottom: 20px;
-    font-size: 18px;
-}
-
-.popup-content button {
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#confirm-age {
-    background-color: green;
-    color: white;
-}
-
-#deny-age {
-    background-color: red;
-    color: white;
-}
-
     </style>
 </head>
 <body>
     <header>
-        <img src="Erotik.png" alt="Logo" class="header-image">
-        <nav>
-            <a href="#about">À propos</a>
-            <a href="mass.html">Nos filles</a>
-            <a href="https://wa.me/330615790257" target="_blank">Contact</a>
-        </nav>
+        <a href="#">Accueil</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
     </header>
-    <div id="age-verification-popup">
-        <div class="popup-content">
-            <h1>Attention</h1>
-            <p>Ce site est réservé aux personnes âgées de 18 ans et plus. Veuillez confirmer votre âge pour continuer.</p>
-            <button id="confirm-age">J'ai 18 ans ou plus</button>
-            <button id="deny-age">Je n'ai pas 18 ans</button>
-        </div>
-    </div>
     
     <section class="hero">
-        <h1>Découvrez l'art du massage érotique</h1>
-        <p>EROTIK LUX, c’est bien plus qu’une simple agence, c’est un espace dédié à l’exploration des sens et à la recherche du bien-être. Nous offrons une expérience unique où l’élégance et la sensualité se mêlent pour vous faire vivre des instants d’exception.</p>
-        <button href="mass.html">Faire une réservation</button>
+        <h1>Bienvenue chez Erotik Luxembourg</h1>
+        <p>Découvrez une expérience unique où l’élégance et la sensualité se mêlent.</p>
+        <button>En savoir plus</button>
     </section>
-
-    <section class="about" id="about">
-        <img src="massage-setup.jpg" alt="Cadre raffiné">
+    
+    <section class="about">
+        <img src="about-image.jpg" alt="Présentation">
         <div>
-            <h2>Présentation de l'Agence</h2>
-            <p>EROTIK LUX, c’est bien plus qu’une simple agence, c’est un espace dédié à l’exploration des sens et à la recherche du bien-être. Nous offrons une expérience unique où l’élégance et la sensualité se mêlent pour vous faire vivre des instants d’exception.</p>
-           <h2>Un Cadre Discret et Intime</h2>
-            <p>Chez EROTIK LUX, la discrétion est une priorité absolue. Nos locaux ont été spécialement aménagés pour garantir une atmosphère paisible et intime. Vous serez accueilli dans un cadre luxueux où le respect de votre vie privée est au cœur de nos préoccupations.</p>
-            <h2>Réservations Sécurisées</h2>
-            <p>Pour confirmer votre réservation et garantir la qualité de nos prestations, nous travaillons exclusivement avec un système d’acompte. Cet acompte peut être réglé via virement bancaire ou PayPal, vous offrant ainsi des options fiables et sécurisées.</p>
-            <h2>Professionnalisme, Respect et Discrétion</h2>
-            <p>Nos masseuses sont des professionnelles qualifiées et formées pour offrir un service haut de gamme. Elles allient savoir-faire, respect et discrétion pour vous garantir une expérience inoubliable.</p>
-            <h2>Une Invitation à l’Évasion</h2>
-            <p>Vous êtes à la recherche de plaisirs intenses et de sensations fortes ? Laissez-vous tenter par l’excellence des services proposés par EROTIK LUX. Contactez-nous dès aujourd’hui pour découvrir un univers où le plaisir et la sensualité prennent tout leur sens.</p>
+            <h2>À propos de nous</h2>
+            <p>EROTIK LUX est bien plus qu’une simple agence, c’est un espace dédié à l’exploration des sens et au bien-être.</p>
         </div>
-        <button onclick="window.open(href="https://wa.me/330615790257", '_blank')">Nous contacter</button>
     </section>
-
-    <section class="reservation" id="reservation">
+    
+    <section class="reservation">
         <h2>Réservez votre expérience</h2>
-        <div class="cards">
-            <div class="card">
-                <img src="serv1.jpg" alt="Masseuse 1">
-                <h3>Massage Érotique avec Rapport Sexuel</h3>
-                <p>Le massage érotique avec rapport sexuel proposé par EROTIK LUX est une expérience sensuelle et intime, alliant relaxation et plaisir. Nos professionnelles qualifiées vous guideront à travers un moment de détente profonde avant de vous offrir une expérience plus intense, respectueuse et discrète. Chaque séance est adaptée à vos besoins pour garantir un bien-être total dans un cadre raffiné et sécurisé.</p>
-                <button onclick="window.open(href="https://wa.me/330615790257", '_blank')">Réserver maintenant</button>
-            </div>
-            <div class="card">
-                <img src="serv2.jpg" alt="Masseuse 2">
-                <h3>Massage simple</h3>
-                <p>Le massage simple proposé par EROTIK LUX est une expérience de relaxation pure, visant à apaiser le corps et l'esprit. Nos masseuses qualifiées utilisent des techniques douces et ciblées pour soulager les tensions musculaires, améliorer la circulation et procurer une sensation de bien-être profond. Ce service est idéal pour ceux qui recherchent une détente sans compromis, dans un environnement intime et discret.</p>
-                <button onclick="window.open(href="https://wa.me/330615790257", '_blank')">Réserver maintenant</button>
-            </div>
-            <div class="card">
-                <img src="serv3.jpg" alt="Masseuse 3">
-                <h3>Repos séquentiel</h3>
-                <p>Le repos séquentiel chez EROTIK LUX combine relaxation et bien-être dans une approche progressive. Ce massage se déroule sur une période de trois ou quatre heures, incluant des phases de repos complet pour permettre au corps et à l'esprit de se ressourcer pleinement. L'accent est mis sur la détente musculaire, le lâcher-prise et le sommeil réparateur, créant ainsi une expérience de relaxation totale. Ce service est parfait pour ceux qui souhaitent un moment d'évasion prolongé, alliant repos et sensations apaisantes.</p>
-                <button onclick="window.open(href="https://wa.me/330615790257", '_blank')">Réserver maintenant</button>
-            </div>
-        </div>
+        <button>Réserver</button>
     </section>
-<br>
-    <section class="pricing" id="pricing">
-        <h2>Description des tarifs</h2>
-        <h3>Massage Érotique avec Rapport Sexuel</h3>
-        <ul>
-            <li><strong>1 heure :</strong> 150 €</li>
-            <li><strong>2 heures :</strong> 200 €</li>
-            <li><strong>3 heures :</strong> 300 €</li>
-            <li><strong>4 heures :</strong> 350 €</li>
-            <li><strong>La nuit :</strong> 400 €</li>
-        </ul>
-        
-        <h3>Massage Simple</h3>
-        <ul>
-            <li><strong>1 heure :</strong> 100 €</li>
-            <li><strong>2 heures :</strong> 150 €</li>
-        </ul>
     
-        <h3>Repos Séquentiel</h3>
-        <ul>
-            <li><strong>3 heures :</strong> 200 € (repos inclus)</li>
-            <li><strong>4 heures :</strong> 350 € (avec sommeil inclus)</li>
-        </ul>
-        <button onclick="window.open(href="https://wa.me/330615790257", '_blank')">Réserver maintenant</button>
-        <section class="massages">
-            <h2>Nos Types de Massages Érotiques</h2>
-            <ul>
-                <li><strong>Massage Sensuel :</strong> Un mélange parfait entre relaxation et sensualité, conçu pour éveiller vos sens et relâcher les tensions.</li>
-                <li><strong>Massage Body-to-Body :</strong> Un massage intime où le corps de la masseuse devient l’instrument principal de votre détente.</li>
-                <li><strong>Massage Érotique avec Huiles Chaudes :</strong> Un massage délicat réalisé avec des huiles chaudes pour stimuler vos sens et relaxer vos muscles.</li>
-                <li><strong>Massage Tantrique :</strong> Un voyage spirituel et sensuel visant à éveiller votre énergie intérieure.</li>
-                <li><strong>Massage à Quatre Mains :</strong> Deux masseuses expérimentées synchronisent leurs gestes pour une relaxation totale et un éveil sensoriel incomparable.</li>
-                <li><strong>Massage Nuru :</strong> Un massage exceptionnel utilisant un gel spécial pour une expérience intime et relaxante.</li>
-                <li><strong>Massage Couple :</strong> Partagez un moment de complicité et de détente avec votre partenaire.</li>
-                <li><strong>HARDCORE :</strong> Vous pouvez aussi essayer nos séances purement hardcore contenant des pratiques sexuelle simple tel que la suce la  lèche la  fellation simple ou nature des séances massages plus branlette baise pratique anal ou aval</li>
-            </ul>
-            <button onclick="window.open(href="https://wa.me/330615790257", '_blank')">Réserver maintenant</button>
-        </section>
-    </section>
-    <button id="back-to-top" style="display: none;">↑</button>
-    
-    <!-- Styles CSS pour le carrousel -->
-    <style>
-    /* Fond léger avec effet 3D grâce aux ombres */
-.reservation, .pricing, .massages {
-    position: relative;
-    justify-content: center;
-    color: #090909;
-    
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1), 0 4px 30px rgba(0, 0, 0, 0.1);  /* Ombres subtiles pour l'effet 3D */
-    border-radius: 10px;
-}
-
-/* Optionnel : ajouter une légère bordure arrondie pour l'effet 3D */
-
-    .image-carousel {
-        text-align: center;
-        padding: 50px 20px;
-        background-color: #f4f4f4;
-    }
-    
-    .image-carousel h2 {
-        color: #ff0000;
-        font-size: 2em;
-        margin-bottom: 20px;
-    }
-    
-    .carousel-container {
-        position: relative;
-        width: 80%;
-        margin: 0 auto;
-        overflow: hidden;
-    }
-    
-    .carousel {
-        display: flex;
-        transition: transform 0.5s ease;
-    }
-    
-    .carousel-image {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        object-fit: cover;
-    }
-    
-    .prev {
-        left: 10px;
-    }
-    
-    .next {
-        right: 10px;
-    }
-    
-    button:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-    </style>
-    
-    <!-- Script JavaScript pour faire fonctionner le carrousel -->
-    <script>
-    // Gestion du pop-up d'âge
-  // Sélection des éléments
-  const agePopup = document.getElementById("age-verification-popup");
-        const siteContent = document.getElementById("site-content");
-        const confirmAgeBtn = document.getElementById("confirm-age");
-        const denyAgeBtn = document.getElementById("deny-age");
-
-        // Gestionnaire pour le bouton "J'ai 18 ans ou plus"
-        confirmAgeBtn.addEventListener("click", () => {
-            agePopup.style.display = "none"; // Cache le pop-up
-            siteContent.style.display = "block"; // Affiche le contenu du site
-        });
-
-        // Gestionnaire pour le bouton "Je n'ai pas 18 ans"
-        denyAgeBtn.addEventListener("click", () => {
-            alert("Vous devez avoir au moins 18 ans pour accéder à ce site.");
-            window.location.href = "https://www.google.com"; // Redirige l'utilisateur
-        });
-document.getElementById('confirm-age').addEventListener('click', () => {
-    document.getElementById('age-verification-popup').style.display = 'none';
-});
-document.getElementById('deny-age').addEventListener('click', () => {
-    alert("Accès refusé !");
-});
-        const sections = document.querySelectorAll('section');
-window.addEventListener('scroll', () => {
-    sections.forEach(section => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top < window.innerHeight) {
-            section.style.opacity = 1;
-            section.style.transform = 'translateY(0)';
-        }
-    });
-});
-        const backToTop = document.getElementById('back-to-top');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 200) {
-            backToTop.style.display = 'block';
-        } else {
-            backToTop.style.display = 'none';
-        }
-    });
-    backToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    </script>
     <footer>
-        <p>© 2024 Erotik LUX Agence de Massage Érotique. Tous droits réservés. | Conditions de paiement : Paypal, cartes bancaires, virements.</p>
+        &copy; 2025 Erotik Luxembourg. Tous droits réservés.
     </footer>
 </body>
 </html>
