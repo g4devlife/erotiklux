@@ -220,7 +220,7 @@ body {
             card.innerHTML = `
                 <img src="${masseuse.image}" alt="${masseuse.name}" onclick="toggleHighlight(this)">
                 <h3>${masseuse.name}</h3>
-               <button class="btn" onclick="window.open('https://wa.me/33757831654', '_blank')">Réserver</button>
+               <button class="btn" onclick="window.open('https://wa.me/qr/W62DOKTYHRSNL1', '_blank')">Réserver</button>
 
             `;
             gallery.appendChild(card);
@@ -229,7 +229,7 @@ body {
         function reserve(name) {
     const phoneNumber = '33757831654'; // Numéro sans le 0 après +33
     const message = encodeURIComponent(`Bonjour, je souhaite réserver une séance avec ${name}.`);
-    const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+    const whatsappURL = `https://wa.me/qr/W62DOKTYHRSNL1`;
     window.open(whatsappURL, '_blank');
 }
 
